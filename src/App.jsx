@@ -22,7 +22,6 @@ function App() {
     };
     func();
   }, []);
-
   // let ggg = document.querySelectorAll("gg")
   // console.log(ggg)
   const gg = () => {
@@ -39,7 +38,8 @@ function App() {
       } else if (char == character.innerText) {
         character.classList.add("white");
         character.classList.remove("red");
-        count.current=count.current+1;
+        count.current = index
+        console.log(count.current)
       } else {
         character.classList.add("red");
         character.classList.remove("white");
@@ -52,9 +52,9 @@ function App() {
     let timenow = new Date();
     return Math.floor((timenow - starttime) / 1000);
   };
-let yourTypingSpeed = (count.current/5)/1
+let yourTypingSpeed = (count.current/5)/(60/60)
   const timmer = ()=>{
-    
+    console.log(count.current)
  let mega =  setInterval(() => {
     const timer = document.getElementById("timer");
     const finaltime = timerfunction();
